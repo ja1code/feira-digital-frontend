@@ -1,26 +1,21 @@
 <template>
-  <div id="app">
     <landing/>
-  </div>
 </template>
 
 <script>
 import landing from './components/landing.vue'
+import loginComerc from "./components/loginComerc.vue"
 
 export default {
   name: 'app',
   components: {
     landing,
+    loginComerc
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import url("/style/style.css");
+
 </style>

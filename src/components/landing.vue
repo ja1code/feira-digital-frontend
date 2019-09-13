@@ -1,12 +1,13 @@
 <template>
-<div class="bg container-fluid">
-        <h1 class="title"><b>Feira Digital</b></h1>
+<div class="bgLanding container-fluid">
+    <h1 class="titleLanding"><b>Feira Digital</b></h1>
         <p><b>O que está procurando?</b></p>
-        <form action="" method="get"><input type="search" name="produto" id="produto" placeholder="Ex: Iphone 256gb" size='30%'>
+        <form action="" method="get">
+            <input type="search" name="produto" id="produto" placeholder="Ex: Iphone 256gb" size='30%'>
         <!--<input type="submit" value="Pesquisar">-->
-        </form>
-        <p style="padding: 2%;">ou</p>
-        <a href="http://">Pesquise no mapa</a>
+        </form> 
+    <p style="padding: 2%;">ou</p>
+    <a class=aLand href="http://">Pesquise no mapa</a>
 
 </div>
 
@@ -26,8 +27,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import url("../style/style.css");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-a{
+/*a{
     text-decoration: none;
     color:rgb(221, 215, 215);
 }
@@ -48,6 +50,6 @@ h1{
     background-size: cover;
     background: linear-gradient(180deg, #FFA800 0%, rgba(255, 255, 255, 0) 100%), #F97700;
     text-align: center;
-}
+}*/
 
 </style>
