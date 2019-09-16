@@ -7,12 +7,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/a',
       name: 'main',
       component: Main
     },
     {
-      path: '/search',
+      path: '/',
       name: 'search',
       component: () => import(/* webpackChunkName: "group-foo" */ './views/Search.vue')
     }

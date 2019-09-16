@@ -1,18 +1,14 @@
 <template>
   <div id="app">
-    <!-- <router-view/> -->
-    <Map />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Map from '@/components/map/map.vue'
+
 
 export default {
   name: 'app',
-  components: {
-    Map
-  }
 }
 </script>
 

@@ -1,4 +1,9 @@
+.card-img-top{
+    border-style: none;
+    border-radius: 5px 5px 0px 0px !important;
+}
 .card{
+    border-radius: 0px 0px 5px 5px !important;
     margin-bottom: 5%;
     border-style: none;
     box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25)
@@ -8,6 +13,8 @@
     font-size: .7em;
 }
 a.pSearch{
+    padding: -20%;
+    color: white;
     text-decoration: none;
 }
 .products{
@@ -31,7 +38,10 @@ h3.pSearch{
     background-size: cover;
 }
 .bgLanding{
-    background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/feira.jpg");
+    /* background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF; */
     font-family: 'Open Sans', sans-serif;
     color:whitesmoke;
     height: 100vh;
@@ -62,4 +72,14 @@ a.aLand{
 
 .aInput:focus {
     outline: none !important;
+}
+.myBtn{
+    border-color: #ffffff;
+    margin-top: 4%;
+    margin-right: 3%;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 3% 7.5%;
+    border-style: solid !important;
 }

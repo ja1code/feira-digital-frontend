@@ -7,7 +7,10 @@
       <b>O que está procurando?</b>
     </p>
     <input class="aInput" type="text" name="produto" id="produto" placeholder="Ex: Iphone 256gb" />
+      <button class="myBtn">Por produto </button>
+      <button class="myBtn" style="padding: 3% 14% !important; margin-right: 0% !important;">Por loja</button>
     <p style="padding: 2%;">ou</p>
+      <button class="myBtn" style="padding: 3% 25% !important; margin-top: -3.4%; margin-right: 0% !important;">Pesquise no mapa</button>
   </div>
 </template>
 
