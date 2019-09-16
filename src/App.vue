@@ -1,19 +1,17 @@
 <template>
-    <search/>
+  <div id="app">
+    <!-- <router-view/> -->
+    <Map />
+  </div>
 </template>
 
 <script>
-import landing from './components/landing.vue'
-import loginComerc from "./components/loginComerc.vue"
-import search from "./components/search.vue"
-
+import Map from '@/components/map/map.vue'
 
 export default {
   name: 'app',
   components: {
-    landing,
-    loginComerc,
-    search
+    Map
   }
 }
 </script>
