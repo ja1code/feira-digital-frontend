@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Map from '@/components/map/map.vue'
+import Map from '@/components/map/map2.vue'
 
 export default {
   name: 'app',
