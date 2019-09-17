@@ -1,13 +1,25 @@
-.card{
-    margin-bottom: 5%;
-    border-style: none;
-    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25)
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+html {
+    height: 100%;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    }
+}
+body{
+    height: 100%;
 }
 .pSearch{
     color: #01BAEF; 
     font-size: .7em;
 }
 a.pSearch{
+    padding: -20%;
+    color: white;
     text-decoration: none;
 }
 .products{
@@ -27,10 +39,13 @@ h3.pSearch{
 .bgSearch{
     background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
     color:whitesmoke;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
 }
 .bgLanding{
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image: url("../assets/feira.jpg"); */
     background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
     font-family: 'Open Sans', sans-serif;
     color:whitesmoke;
@@ -62,4 +77,31 @@ a.aLand{
 
 .aInput:focus {
     outline: none !important;
+}
+.myBtn{
+    border-color: #ffffff;
+    margin-top: 4%;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 3% 7.5%;
+    border-style: solid !important;
+}
+.myBtn:focus:focus {
+    outline: none !important;
+}
+.imgF{
+    max-width: 100%;
+    border-radius:10px 10px 0px 0px;
+}
+.res{
+    text-align: center;
+}
+.res1{
+    position: center;
+    background: #3d3d3d;
+    border-radius: 0px 0px 10px 10px ;
+    color: #01BAEF;
+    font-size: .78em;
+    text-decoration: none;
 }
