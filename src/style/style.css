@@ -1,95 +1,26 @@
-body{
-    height: 100%;
-}
-.pSearch{
-    color: #01BAEF; 
-    font-size: .7em;
-}
-a.pSearch{
-    padding: -20%;
-    color: white;
-    text-decoration: none;
-}
-.products{
-    text-align: center;
-}
-.titleSearch{
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 3.5em;
-}
-p.pSearch{
-    color: #01BAEF;
-}
-h3.pSearch{
-    color: #01BAEF;
-}
-.bgSearch{
-    background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
-    color:whitesmoke;
-    height: 100%;
-    background-size: cover;
-}
-.bgLanding{
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-image: url("../assets/feira.jpg"); */
-    background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
-    font-family: 'Open Sans', sans-serif;
-    color:whitesmoke;
-    height: 100vh;
-    background-size: cover;
-    /* background: linear-gradient(180deg, #FFA800 0%, rgba(255, 255, 255, 0) 100%), #F97700; */
-    text-align: center;
-}
-.titleLanding{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 3.5em;
-    padding-top: 50%;
+@font-face {
+  font-family: "psans";
+  src: url("../assets/psans.ttf");
 }
 
-a.aLand{
-    text-decoration: none;
-    color:rgb(221, 215, 215);
-    cursor: pointer;
+.f-btn {
+  font-family: "psans";
+  background: transparent;
+  border-radius: 10px !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: white;
+  height: 50px !important;
+  width: 320px !important;
+  color: white;
 }
 
-.aInput {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    height: 50px !important;
-    width: 320px;
-    padding: 2%;
-    border: 0;
-}
-
-.aInput:focus {
-    outline: none !important;
-}
-.myBtn{
-    border-color: #ffffff;
-    margin-top: 4%;
-    color: #ffffff;
-    border-radius: 10px;
-    background-color: transparent;
-    padding: 3% 7.5%;
-    border-style: solid !important;
-}
-.myBtn:focus:focus {
-    outline: none !important;
-}
-.imgF{
-    max-width: 100%;
-    border-radius:10px 10px 0px 0px;
-}
-.res{
-    text-align: center;
-}
-.res1{
-    position: center;
-    background: #3d3d3d;
-    border-radius: 0px 0px 10px 10px ;
-    color: #01BAEF;
-    font-size: .78em;
-    text-decoration: none;
+.f-input {
+  border: 0;
+  border-radius: 5px !important;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, .2) !important;
+  height: 50px;
+  width: 320px;
+  font-size: 1.3rem;
+  padding-left: 5%;
 }

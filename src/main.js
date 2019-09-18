@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Icon }  from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import "./style/style.css";
 
 
 // this part resolve an issue where the markers would not appear

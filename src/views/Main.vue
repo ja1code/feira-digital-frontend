@@ -1,17 +1,16 @@
 <template>
-  <div class="bgLanding container-fluid">
-    <h1 class="titleLanding">
-      <b>Feira Digital</b>
-    </h1>
-    <p>
-      <b>O que está procurando?</b>
-    </p>
-    <input class="aInput" type="text" name="produto" id="produto" placeholder="Ex: Iphone 256gb" />
-      <button class="myBtn" style="width: 85%;">Pesquisar </button>
-        <p style="padding: 2%;">ou <br>
-          <button class="myBtn" style="width: 88.5%;">Navegue no mapa</button> 
-        </p>
-      
+  <div class="bg">
+    <div id="logo-holder">
+      <!-- <img src="@/assets/logo.png" alt="Feira digital"> -->
+      <h1 id="logo">Feira Digital</h1>
+    </div>
+    <div id="controls">
+      <h5>O que está procurando?</h5>
+      <input class="form-control f-input" type="text" name="input-prod" id="input-prod" placeholder="ex: iPhone X 256gb">
+      <button @click="search()" class="f-btn">Pesquisar</button>
+      <h5>ou</h5>
+      <button class="f-btn">Navegar no mapa</button>
+    </div>
   </div>
 </template>
 
@@ -19,34 +18,50 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    search () {
+      console.log('a')
+      this.$router.push('/search');
+    }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import url("../style/style.css");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-/*a{
-    text-decoration: none;
-    color:rgb(221, 215, 215);
-}
-input{
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    font-size: 1em;
-}
-h1{
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 3.5em;
-    padding-top: 50%;
-}
-.bg{
-    font-family: 'Open Sans', sans-serif;
-    color:whitesmoke;
-    height: 100vh;
+<style>
+  .bg {
+    height: 100% !important;
+    width: 100% !important;
+    background: linear-gradient(359.58deg, #007799 0.17%, rgba(255, 255, 255, 0) 99.83%), #01BAEF;
+    /* background-image: url('../assets/feira.jpg');
     background-size: cover;
-    background: linear-gradient(180deg, #FFA800 0%, rgba(255, 255, 255, 0) 100%), #F97700;
+    background-repeat: no-repeat;
+    background-position: center; */
     text-align: center;
-}*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  #logo {
+    margin-bottom: 1%;
+    color: white;
+    font-size: 4.2rem !important;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+  }
+
+  #controls {
+   color: white;
+  }
+
+  #controls input {
+    margin-bottom: 5%;
+  }
+
+
+  #controls h5 {
+    margin: 3% !important;
+  }
 </style>
