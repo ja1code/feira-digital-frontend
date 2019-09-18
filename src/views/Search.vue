@@ -3,7 +3,7 @@
     <h1 class="titleSearch">Feira Digital</h1>
     <p style="margin-left: 3%;"><b>Você buscou por:</b></p>
     <h2 style="margin-left: 3%;"><b>Mi band 4</b></h2>
-    <div class="container" v-for="">
+    <div class="container">
       <div class="row">
         <div class="col">
           <div class="res">
