@@ -68,4 +68,10 @@ h5{
   justify-content: center;
   align-content: center;
 }
+.f-input{
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.f-input:placeholder-shown{
+  text-align: left;
+}
 </style>
