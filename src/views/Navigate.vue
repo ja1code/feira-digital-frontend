@@ -5,8 +5,9 @@
       <h5>Selecione um pavilhão para navegar</h5>
       <img class="f-map" src="../components/map/map.svg" alt="">
       <p>
-        ou <br> <button class="f-btn">Escanear um código QR</button>
+        ou 
       </p>
+       <button class="f-btn">Escanear um código QR</button>
     </div>
       <div class="n-bottom">
         <h4>O que está procurando?</h4>
@@ -37,6 +38,7 @@ export default {
   align-content: center;
 }
 .f-btn{
+  margin-bottom: 20px;
   font-size: 1.3rem;
   border-color: #01baef;
   color: #01BAEF;

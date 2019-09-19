@@ -16,7 +16,7 @@
         </div>
         <div class="col">
           <img src="../assets/miBand.webp">
-          <p id="f-card-format">Banca do zé 
+          <p id="f-card-format">Eletrônicos legais 
             <br>Mi Band 4 
             <br> <a href="">COMO CHEGAR</a>
           </p>
