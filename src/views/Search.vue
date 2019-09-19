@@ -22,6 +22,7 @@
           </p>
         </div>
       </div>
+      <div class="opac">aaaaaaaaaa</div>
     </div>
 </div>         
 </template>
@@ -40,6 +41,12 @@ export default {
 <style scoped>
 
 @import url("../style/style.css");
+.opac{
+  opacity: .3;
+}
+div{
+  position: relative;
+}
 .container{
   text-align: center; 
   display: flex;
