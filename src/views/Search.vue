@@ -1,5 +1,7 @@
 <template>
 <div class="bana">
+  <div id="Search">
+  </div>
     <h1 class="logo"><b>Feira digital</b></h1>
     <p id="f-header">Você buscou por: </p>
     <h2 id="f-header">Mi Band 4</h2>
