@@ -15,6 +15,18 @@
   color: white;
 }
 
+.f-btn-full {
+  font-family: "psans";
+  background: #01BAEF;
+  border-radius: 10px !important;
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-color: #01BAEF;
+  height: 50px !important;
+  width: 320px !important;
+  color: white;
+}
+
 .f-input {
   border: 0;
   border-radius: 5px !important;
@@ -28,6 +40,7 @@
   color: white;
   margin-left: 3%;
 }
+
 #f-card-format{
   background: #3d3d3d;
   color: #01BAEF;
