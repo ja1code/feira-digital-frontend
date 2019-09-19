@@ -20,15 +20,14 @@ export default {
     return {};
   },
   methods: {
-    search () {
-      console.log('a')
+    search () { 
       this.$router.push('/search');
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
   .bg {
     height: 100% !important;
     width: 100% !important;
@@ -37,7 +36,7 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
-    text-align: center;
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
