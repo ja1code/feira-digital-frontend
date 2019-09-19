@@ -9,7 +9,7 @@
       <input class="form-control f-input" type="text" name="input-prod" id="input-prod" placeholder="ex: iPhone X 256gb">
       <button @click="search()" class="f-btn">Pesquisar</button>
       <h5>ou</h5>
-      <button class="f-btn" @click="$router.push('/nav')">Navegar no mapa</button>
+      <button @click="$router.push('/nav')" class="f-btn">Navegar no mapa</button>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     return {};
   },
   methods: {
-    search () { 
+    search () {
       this.$router.push('/search');
     }
   }
