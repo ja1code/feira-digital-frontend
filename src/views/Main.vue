@@ -20,11 +20,7 @@ export default {
     return {};
   },
   methods: {
-<<<<<<< HEAD
-    search () {
-=======
     search () { 
->>>>>>> b3e9d3aac042a7bf4ad68e7e56e60dafd236ebd7
       this.$router.push('/search');
     }
   }
