@@ -13,6 +13,7 @@ export default {
 
 <style>
 html, body, #app {
+  overflow-x: hidden;
   height: 100% !important;
   width: 100% !important;
   font-family: "psans" !important;
