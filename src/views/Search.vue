@@ -7,14 +7,14 @@
     <h2 id="f-header">Mi Band 4</h2>
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-6">
           <img src="../assets/miBand.webp">
           <p id="f-card-format">Banca do zé 
             <br>Mi Band 4 
             <br> <a href="">COMO CHEGAR</a>
           </p>
         </div>
-        <div class="col">
+        <div class="col-6">
           <img src="../assets/miBand.webp">
           <p id="f-card-format">Eletrônicos legais 
             <br>Mi Band 4 
