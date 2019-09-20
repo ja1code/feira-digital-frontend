@@ -3,24 +3,15 @@
     <b-modal id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
       <q-r-scanner />
     </b-modal>
-    <h1 class="logo">Feira Digital</h1>
-    <div class="f-bg">
-      <h5>Selecione um pavilhão para navegar</h5>
-      <img class="f-map" src="../components/map/map.svg" alt="">
-      <p>
-        ou 
-      </p>
-      <button class="f-btn" v-b-modal.qr>Escanear um código QR</button>
+    <Map />
+    <div id="header">
+      A
     </div>
-      <div class="n-bottom">
-        <h4>O que está procurando?</h4>
-        <input type="text" name="input-prod" id="input-prod" placeholder="Ex: Iphone X 256gb" class="form-control f-input">
-      </div>   
   </div>
 </template>
 
 <script>
-import Map from '@/components/map/map2'
+import Map from '@/components/map/map'
 import QRScanner from "@/components/qr/qr"
 export default {
   name: "navigate",
@@ -78,5 +69,16 @@ h5{
 }
 .f-input:placeholder-shown{
   text-align: left;
+}
+
+#header {
+  top: 0;
+  right: 0;
+  display: block;
+  position: absolute;
+  height: 20vh;
+  width: 100%;
+  background: #01baef;
+  z-index: 1041;
 }
 </style>
