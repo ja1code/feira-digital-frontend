@@ -66,17 +66,17 @@ h4{
 }
 .logo{
   text-align: center;
-  margin-bottom: 1%;
   color: white;
   font-size: 3.4rem !important;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
 #header {
+  padding-top: 1%;
   top: 0;
   right: 0;
   display: block;
   position: absolute;
-  height: 11.7vh;
+  height: 10vh;
   width: 100%;
   background: #01baef;
   z-index: 1000;
