@@ -74,7 +74,7 @@ export default {
     }
   },
   mounted () {
-    this.fetchInfo()
+    this.navigate()
   }
 }
 </script>

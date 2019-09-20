@@ -8,7 +8,7 @@
       style="height: 100vh;"
       :center="mapProps.center"
     >
-      <l-marker :lat-lng="mapProps.userPosition"></l-marker>
+      <l-marker v-if="mapProps.userPosition" :lat-lng="mapProps.userPosition"></l-marker>
       <div>
         <l-polyline
         :lat-lngs="lines"
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { EventBus } from '@/assets/eventBus.js';
 import axios from 'axios'
 import { CRS, latLng, Util } from "leaflet";
 import { LMap, LImageOverlay, LMarker, LPopup, LPolyline } from "vue2-leaflet";
@@ -42,7 +43,7 @@ export default {
         maxZoom: 10,
         crs: CRS.Simple,
         center: [-15.79734, -47.9498],
-        userPosition: [-15.79734, -47.9498]
+        userPosition: null
       },
       lines: []
     }
@@ -67,10 +68,21 @@ export default {
       let x = data.inMap[1]
       let y = data.inMap[0]
       let route = []
-      if (y > userPosition[0]){
-        
-      }
+      let tmp = [[this.mapProps.userPosition[0], this.mapProps.userPosition[1]], [y - 10, this.mapProps.userPosition[1]], [y - 10, x]]
+      this.lines.push(tmp)
     }
+  },
+  mounted () {
+    EventBus.$on('newPOS', (valor) => {
+      this.mapProps.userPosition = valor
+      this.mapProps.center = valor
+      this.navigate({
+        inMap: [244, 254],
+        irl: 'coords',
+        name: 'bullshito',
+        addr: '300/301'
+      })
+    })
   }
 }
 </script>
