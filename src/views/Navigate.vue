@@ -77,6 +77,7 @@ h4{
   box-shadow: 0px 3px 3px rgba(0, 0, 0, .3)
 }
 .bottom{
+  z-index: 999;
   bottom:0;
   right: 0;
   display: block;
