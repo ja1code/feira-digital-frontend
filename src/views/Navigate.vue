@@ -5,7 +5,15 @@
     </b-modal>
     <Map />
     <div id="header">
-      A
+      <h1 class="logo">Feira Digital</h1>
+    </div>
+    <div class="bottom">
+      <h4>O que está procurando?</h4>
+      <input type="text" name="input-prod" id="input-prod" class="f-input" placeholder="Ex: Iphone X 256gb">
+    </div>
+    <div class="btn">
+      <p>ou</p>
+      <button class="f-btn">Escanear código QR</button>
     </div>
   </div>
 </template>
@@ -23,24 +31,32 @@ export default {
 </script>
 
 <style scoped>
-.n-bottom{
-  margin-top: 10px;
-  color: white;
-  text-align: center; 
+.btn{
+  width: 100%;
+  bottom: 20%;
+  right: 0;
+  display: block; 
+  position: absolute;
+  color: #01BAEF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
-.f-btn{
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  border-color: #01baef;
-  color: #01BAEF;
+.f-input{
+  margin-left:auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
-h5{
-  margin-top: 23px;
+h4{
+  text-align: center;
+  margin-top: 5px;
+  color: white;
 }
 .logo{
   text-align: center;
@@ -49,36 +65,24 @@ h5{
   font-size: 3.4rem !important;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
-.f-map{
-  margin-right: 20px;
-  margin-left: 20px;
-}
-.f-bg{
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background: gray;
-  color: white;
-  text-align: center; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-}
-.f-input{
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
-}
-.f-input:placeholder-shown{
-  text-align: left;
-}
-
 #header {
   top: 0;
   right: 0;
   display: block;
   position: absolute;
-  height: 20vh;
+  height: 11.7vh;
   width: 100%;
   background: #01baef;
   z-index: 1041;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, .3)
+}
+.bottom{
+  bottom:0;
+  right: 0;
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  background: #01baef;
 }
 </style>
