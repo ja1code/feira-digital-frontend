@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
+    <b-modal ref="qr" id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
       <q-r-scanner />
     </b-modal>
     <Map />
@@ -13,7 +13,7 @@
     </div>
     <div class="btn">
       <p>ou</p>
-      <button class="f-btn">Escanear código QR</button>
+      <button class="f-btn blue" v-b-modal.qr style="z-index: 999">Escanear código QR</button>
     </div>
   </div>
 </template>
@@ -21,11 +21,17 @@
 <script>
 import Map from '@/components/map/map'
 import QRScanner from "@/components/qr/qr"
+import { EventBus } from '@/assets/eventBus.js';
 export default {
   name: "navigate",
   components: {
     Map,
     QRScanner
+  },
+  mounted () {
+    EventBus.$on('newPOS', () => {
+      this.$refs['qr'].hide()
+    })
   }
 }
 </script>
@@ -73,7 +79,7 @@ h4{
   height: 11.7vh;
   width: 100%;
   background: #01baef;
-  z-index: 1041;
+  z-index: 1000;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, .3)
 }
 .bottom{
@@ -84,5 +90,6 @@ h4{
   height: 15vh;
   width: 100%;
   background: #01baef;
+  z-index: 1000;
 }
 </style>
