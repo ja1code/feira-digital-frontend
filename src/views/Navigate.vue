@@ -7,21 +7,26 @@
       <p>
         ou 
       </p>
-       <button class="f-btn">Escanear um código QR</button>
+       <button class="f-btn" v-b-modal.qr>Escanear um código QR</button>
     </div>
       <div class="n-bottom">
         <h4>O que está procurando?</h4>
         <input type="text" name="input-prod" id="input-prod" placeholder="Ex: Iphone X 256gb" class="form-control f-input">
       </div> 
+       <b-modal id="qr" title="Escaneie um código qr" style="z-index: 1001">
+         <q-r-scanner />
+      </b-modal>
   </div>
 </template>
 
 <script>
 import Map from '@/components/map/map2'
+import QRScanner from "@/components/qr/qr"
 export default {
   name: "navigate",
   components: {
-    Map
+    Map,
+    QRScanner
   }
 }
 </script>
