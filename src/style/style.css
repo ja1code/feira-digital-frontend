@@ -1,31 +1,6 @@
 @font-face {
   font-family: "psans";
   src: url("../assets/psans.ttf");
-}
-.fade {
-  position: relative; 
-  bottom: 4em;
-  height: 4em;
-  background: -webkit-linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
-  ); 
-  background-image: -moz-linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
-  );
-  background-image: -o-linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
-  );
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
-  );
-  background-image: -ms-linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 100%
-  );
 } 
 .f-btn {
   font-family: "psans";

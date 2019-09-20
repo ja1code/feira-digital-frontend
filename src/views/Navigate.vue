@@ -1,5 +1,8 @@
 <template>
   <div>
+    <b-modal id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
+      <q-r-scanner />
+    </b-modal>
     <h1 class="logo">Feira Digital</h1>
     <div class="f-bg">
       <h5>Selecione um pavilhão para navegar</h5>
@@ -7,15 +10,12 @@
       <p>
         ou 
       </p>
-       <button class="f-btn" v-b-modal.qr>Escanear um código QR</button>
+      <button class="f-btn" v-b-modal.qr>Escanear um código QR</button>
     </div>
       <div class="n-bottom">
         <h4>O que está procurando?</h4>
         <input type="text" name="input-prod" id="input-prod" placeholder="Ex: Iphone X 256gb" class="form-control f-input">
-      </div> 
-       <b-modal id="qr" title="Escaneie um código qr" style="z-index: 1001">
-         <q-r-scanner />
-      </b-modal>
+      </div>   
   </div>
 </template>
 
