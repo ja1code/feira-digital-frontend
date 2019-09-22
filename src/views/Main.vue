@@ -9,7 +9,7 @@
       <input class="form-control f-input" type="text" name="input-prod" id="input-prod" placeholder="ex: iPhone X 256gb">
       <button @click="search()" class="f-btn">Pesquisar</button>
       <h5>ou</h5>
-      <button class="f-btn">Navegar no mapa</button>
+      <button @click="$router.push('/nav')" class="f-btn">Navegar no mapa</button>
     </div>
   </div>
 </template>
@@ -21,14 +21,13 @@ export default {
   },
   methods: {
     search () {
-      console.log('a')
       this.$router.push('/search');
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
   .bg {
     height: 100% !important;
     width: 100% !important;
@@ -37,7 +36,7 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
-    text-align: center;
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;

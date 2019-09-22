@@ -5,7 +5,7 @@
       :maxZoom="mapProps.maxZoom"
       :minZoom="mapProps.minZoom"
       :crs="mapProps.crs"
-      style="height: 100vh;"
+      style="height: 50vh;"
       :center="mapProps.center"
     >
       <l-marker :lat-lng="mapProps.userPosition"></l-marker>
@@ -74,7 +74,7 @@ export default {
     }
   },
   mounted () {
-    this.fetchInfo()
+    this.navigate()
   }
 }
 </script>
