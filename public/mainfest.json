@@ -1,0 +1,8 @@
+{
+  "name": "Feira Digital",
+  "short_name": "FD",
+  "theme_color": "#01baef",
+  "background_color": "#01baef",
+  "display": "standalone",
+  "orientation": "portrait"
+}

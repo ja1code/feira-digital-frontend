@@ -3,7 +3,8 @@
     <b-modal ref="qr" id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
       <q-r-scanner />
     </b-modal>
-    <Map />
+    <img src="@/components/map/mapv2.svg" alt="" style="max-width: 100%; margin-top: 10vh;">
+    <Map v-if="pavSel" />
     <div id="header">
       <h1 class="logo">Feira Digital</h1>
     </div>
@@ -27,6 +28,11 @@ export default {
   components: {
     Map,
     QRScanner
+  },
+  data() {
+    return {
+      pavSel: null
+    }
   },
   mounted () {
     EventBus.$on('newPOS', () => {
