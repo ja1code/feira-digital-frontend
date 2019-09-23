@@ -4,15 +4,18 @@
       ref="map"
       :min-zoom="mapProps.minZoom"
       :max-zoom="mapProps.maxZoom"
+      :zoom="mapProps.zoom"
       :crs="mapProps.crs"
       style="height: 100vh;"
       :center="mapProps.center"
+      @zoom="updateZoom()"
     >
       <l-marker v-if="mapProps.userPosition" :lat-lng="mapProps.userPosition"></l-marker>
       <div>
         <l-polyline
         :lat-lngs="lines"
-        color="black"></l-polyline>
+        color="black"
+        :weight="lineWt"></l-polyline>
       </div>
       <l-image-overlay :url="mapProps.url" :bounds="mapProps.bounds" />
     </l-map>
@@ -22,7 +25,7 @@
 <script>
 import { EventBus } from '@/assets/eventBus.js';
 import axios from 'axios'
-import { CRS, latLng, Util } from "leaflet";
+import { CRS, latLng, Util, setView } from "leaflet";
 import { LMap, LImageOverlay, LMarker, LPopup, LPolyline } from "vue2-leaflet";
 
 export default {
@@ -37,15 +40,17 @@ export default {
   data () {
     return {
       mapProps: {
-        url: "https://feira.digital/map.svg",
+        url: "https://feira.digital/mapv2.svg",
         bounds: [[0,0], [1000, 1000]],
-        minZoom: -2,
-        maxZoom: 10,
+        minZoom: -1,
+        maxZoom: 3,
+        zoom: -1,
         crs: CRS.Simple,
-        center: [-15.79734, -47.9498],
+        center: [0, 500],
         userPosition: null
       },
-      lines: []
+      lines: [],
+      lineWt: 10
     }
   },
   methods: {
@@ -70,14 +75,35 @@ export default {
       let route = []
       let tmp = [[this.mapProps.userPosition[0], this.mapProps.userPosition[1]], [y - 10, this.mapProps.userPosition[1]], [y - 10, x]]
       this.lines.push(tmp)
+    },
+    newUsrPosition (pos, zoom, extra) {
+      this.$refs.map.mapObject.flyTo(pos, zoom, extra)
+    },
+    updateZoom () {
+      let zoom = this.$refs.map.mapObject.getZoom()
+      if (zoom > 0) {
+        this.lineWt = zoom * 9
+      } else {
+        this.lineWt = 9
+      }
+
     }
   },
   mounted () {
     EventBus.$on('newPOS', (valor) => {
       this.mapProps.userPosition = valor
-      this.mapProps.center = valor
+
+      this.newUsrPosition(valor, 2, {
+        "animate": true,
+        "pan": {
+          "duration": 30
+        }
+      })
+
+      //this.mapProps.center = valor
+
       this.navigate({
-        inMap: [244, 254],
+        inMap: [210, 199],
         irl: 'coords',
         name: 'bullshito',
         addr: '300/301'

@@ -5,10 +5,10 @@
       :maxZoom="mapProps.maxZoom"
       :minZoom="mapProps.minZoom"
       :crs="mapProps.crs"
-      style="height: 50vh;"
-      :center="mapProps.center"
+      style="height: 100vh;"
+      :center="mapProps.userPosition"
+      zoom="2"
     >
-      <l-marker :lat-lng="mapProps.userPosition"></l-marker>
       <l-marker :lat-lng="mapProps.userPosition"></l-marker>
       <div>
         <l-polyline
@@ -38,14 +38,15 @@ export default {
   data () {
     return {
       mapProps: {
-        url: "https://feira.digital/map.svg",
+        url: "https://feira.digital/mapv2.svg",
         bounds: [[0,0], [1000, 1000]],
         minZoom: -2,
-        maxZoom: 1000,
+        maxZoom: 12,
         crs: CRS.Simple,
-        center: [230, 220],
-        userPosition: [125, 890]
+        center: [500, 500],
+        userPosition: [210, 199]
       },
+      //[0.4, 28.3]
       lines: []
     }
   },
