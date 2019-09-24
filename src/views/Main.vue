@@ -6,7 +6,7 @@
     </div>
     <div id="controls">
       <h5>O que está procurando?</h5>
-      <input v-model="search" class="form-control f-input" type="text" name="input-prod" id="input-prod" placeholder="ex: iPhone X 256gb" @input="typeAhead">
+      <input v-model="search" class="form-control f-input" type="text" name="input-prod" id="input-prod" placeholder="ex: iPhone X 256gb" @input="typeAhead" autocomplete="off">
       <div v-if="suggs" class="suggs">
         <div class='sugItem' v-for="sug in suggs" @click="setNav(sug.area)">
           <p>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import { EventBus } from '@/assets/eventBus.js';
 export default {
   data() {
     return {
@@ -47,8 +48,8 @@ export default {
         this.suggs = []
       }
     },
-    setNav (area) {
-      this.$router.push({path: '/nav', area})
+    setNav (areas) {
+      this.$router.push('/nav/'+areas)
     }
   }
 };

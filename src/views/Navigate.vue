@@ -3,7 +3,12 @@
     <b-modal ref="qr" id="qr" title="Escaneie um código qr" centered style="z-index: 1001 !important; position: relattive !important;">
       <q-r-scanner />
     </b-modal>
-    <img src="@/components/map/mapv2.svg" alt="" style="max-width: 100%; margin-top: 10vh;">
+    <div class="row">
+      <div class="col-md-6">A</div>
+      <div class="col-md-6">B</div>
+      <div class="col-md-6">C</div>
+      <div class="col-md-6">D</div>
+    </div>
     <Map v-if="pavSel" />
     <div id="header">
       <h1 class="logo">Feira Digital</h1>
@@ -12,7 +17,7 @@
       <h4>O que está procurando?</h4>
       <input type="text" name="input-prod" id="input-prod" class="f-input" placeholder="Ex: Iphone X 256gb">
     </div>
-    <div class="btn">
+    <div class="btn" v-if="selected">
       <p>ou</p>
       <button class="f-btn blue" v-b-modal.qr style="z-index: 999">Escanear código QR</button>
     </div>
@@ -25,6 +30,7 @@ import QRScanner from "@/components/qr/qr"
 import { EventBus } from '@/assets/eventBus.js';
 export default {
   name: "navigate",
+  props: ['area'],
   components: {
     Map,
     QRScanner
@@ -33,6 +39,9 @@ export default {
     return {
       pavSel: null
     }
+  },
+  beforeMount () {
+    console.log(this.$route.params.area)
   },
   mounted () {
     EventBus.$on('newPOS', () => {

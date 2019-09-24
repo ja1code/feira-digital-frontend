@@ -14,7 +14,7 @@ import "./style/style.css";
 import VueSocketIO from 'vue-socket.io'
  
 Vue.use(new VueSocketIO({
-    connection: 'http://192.168.20.79:2020'
+    connection: 'http://localhost:2020'
 }))
 
 
