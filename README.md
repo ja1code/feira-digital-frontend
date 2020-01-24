@@ -1,29 +1,14 @@
-# feira-frontend
+![logo](./src/assets/logo.png)
 
-## Project setup
-```
-npm install
-```
+## Feira Digital é um aplicativo que tem como objetivo auxiliar a navegação na Feira dos importados de Brasília.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Com o Feira Digital, seria possível pesquisar bancas de uma feira que vendem um produto do seu interesse e saber exatamente como chegar nessa banca, assim como o Google Maps.
+Como planos para o futuro, seriam adicionados funções como 
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Utilizei o framework Vue.js para desenvolver o frontend, socket.io para fazer algumas funções, como o TypeAhead e o Axios para realizar requisições web.
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Screenshots do projeto:
+![mob-1](./src/assets/feira_digital_1.PNG)
+![mob-2](./src/assets/feira_digital_2.PNG)
+![mob-3](./src/assets/feira_digital_3.PNG)
+![mob-4](./src/assets/feira_digital_4.PNG)
